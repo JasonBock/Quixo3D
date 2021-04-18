@@ -1,0 +1,31 @@
+<UserControl x:Class="Quixo3D.UI.CommandReference"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<UserControl.Resources>
+
+		<Style x:Key="commandText" TargetType="TextBlock">
+			<Setter Property="FontSize">
+				<Setter.Value>15</Setter.Value>
+			</Setter>
+
+			<Setter Property="Margin">
+				<Setter.Value>4</Setter.Value>
+			</Setter>
+		</Style>
+
+	</UserControl.Resources>
+	<StackPanel>
+		<TextBlock Style="{StaticResource commandText}">
+			- Hold down Shift and the left mouse button to rotate with the mouse
+		</TextBlock>
+		<TextBlock Style="{StaticResource commandText}">
+			- Hold down Shift and the right mouse button to zoom with the mouse
+		</TextBlock>
+		<TextBlock Style="{StaticResource commandText}">
+			- Press the X key to hide/show the X,Y,Z axes
+		</TextBlock>
+		<TextBlock Style="{StaticResource commandText}">
+			- Press the U key to change camera orientation
+		</TextBlock>
+	</StackPanel>
+</UserControl>

@@ -1,0 +1,3 @@
+change configsettings to not be singleton?
+make more stuff configurable (opacity values, etc)
+unit test piece states

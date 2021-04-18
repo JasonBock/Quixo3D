@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Quixo3D.Engine</name>
+    </assembly>
+    <members>
+        <member name="T:Quixo3D.Engine.Sidetracked.SidetrackedAlphaBetaEngine">
+            <summary>
+            Generates a move using the min-max (with alpha-beta pruning) algorithm.
+            </summary>
+        </member>
+        <member name="T:Quixo3D.Engine.IEngine">
+            <summary>
+            Defines the engine specification.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Engine.IEngine.GenerateMove(Quixo3D.Framework.Board)">
+            <summary>
+            Generates a new <see cref="T:Quixo3D.Framework.Move"/> for the given <see cref="T:Quixo3D.Framework.Board"/>.
+            </summary>
+            <param name="board">A <see cref="T:Quixo3D.Framework.Board"/>.</param>
+            <returns>A <see cref="T:Quixo3D.Framework.Move"/>.</returns>
+        </member>
+        <member name="P:Quixo3D.Engine.IEngine.Evaluations">
+            <summary>
+            Gets the number of evaluations that were performed with the last move generation.
+            </summary>
+        </member>
+        <member name="P:Quixo3D.Engine.IEngine.Visitations">
+            <summary>
+            Gets the number of  moves visited with the last move generation.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Engine.Sidetracked.SidetrackedAlphaBetaEngine.#ctor">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Engine.Sidetracked.SidetrackedAlphaBetaEngine"/> instance.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Engine.Sidetracked.SidetrackedAlphaBetaEngine.GenerateMove(Quixo3D.Framework.Board)">
+            <summary>
+            Generates a new move.
+            </summary>
+            <param name="board">The <see cref="T:Quixo3D.Framework.Board"/> to generate a move for.</param>
+            <returns>The next move.</returns>
+        </member>
+        <member name="P:Quixo3D.Engine.Sidetracked.SidetrackedAlphaBetaEngine.Evaluations">
+            <summary>
+            Gets the number of calculations (i.e. evaluations) that were performed with the last move generation.
+            </summary>
+        </member>
+        <member name="P:Quixo3D.Engine.Sidetracked.SidetrackedAlphaBetaEngine.Visitations">
+            <summary>
+            Gets the number of moves that were visited during the last move generation.
+            </summary>
+        </member>
+        <member name="T:Quixo3D.Engine.Sidetracked.BoardEvaluator">
+            <summary>
+            Evaluates the board based on connectivity within lines that contain non-blank pieces.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Engine.Sidetracked.BoardEvaluator.Evaluate(Quixo3D.Framework.Board)">
+            <summary>
+            Evaluates a <see cref="T:Quixo3D.Framework.Board"/>.
+            </summary>
+            <param name="board">The <see cref="T:Quixo3D.Framework.Board"/> to evaluate.</param>
+            <returns>A numeric value indicating the strenght of the position for the current player.</returns>
+        </member>
+        <member name="T:Quixo3D.Engine.RandomEngine">
+            <summary>
+            A Quixo3D engine that does nothing but generate random moves.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Engine.RandomEngine.#ctor">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Engine.RandomEngine"/> instance.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Engine.RandomEngine.GenerateMove(Quixo3D.Framework.Board)">
+            <summary>
+            Generates a random move.
+            </summary>
+            <param name="board">The <see cref="T:Quixo3D.Framework.Board"/> to generate a move for.</param>
+            <returns>A random <see cref="T:Quixo3D.Framework.Move"/>.</returns>
+        </member>
+        <member name="P:Quixo3D.Engine.RandomEngine.Evaluations">
+            <summary>
+            Gets the number of evaluations that were performed with the last move generation,
+            which is always 1.
+            </summary>
+        </member>
+        <member name="P:Quixo3D.Engine.RandomEngine.Visitations">
+            <summary>
+            Gets the number of move visitations that were performed with the last move generation,
+            which is always 0.
+            </summary>
+        </member>
+    </members>
+</doc>

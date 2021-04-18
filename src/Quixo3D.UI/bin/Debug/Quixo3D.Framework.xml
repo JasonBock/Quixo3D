@@ -1,0 +1,560 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Quixo3D.Framework</name>
+    </assembly>
+    <members>
+        <member name="T:Quixo3D.Framework.Move">
+            <summary>
+            This class represents a move within a Quixo game.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.Move.#ctor">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.Move"/> instance.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.Move.#ctor(Quixo3D.Framework.Coordinate,Quixo3D.Framework.Coordinate)">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.Move"/> instance.
+            </summary>
+            <param name="destination">The destination <see cref="T:Quixo3D.Framework.Coordinate"/>.</param>
+            <param name="source">The source <see cref="T:Quixo3D.Framework.Coordinate"/>.</param>
+        </member>
+        <member name="M:Quixo3D.Framework.Move.ToString">
+            <summary>
+            Gets a user-friendly version of a <see cref="T:Quixo3D.Framework.Move"/> object.
+            </summary>
+            <returns>A string that has the source and destination values.</returns>
+        </member>
+        <member name="P:Quixo3D.Framework.Move.Destination">
+            <summary>
+            Gets the destination <see cref="T:Quixo3D.Framework.Coordinate"/>
+            </summary>
+        </member>
+        <member name="P:Quixo3D.Framework.Move.Source">
+            <summary>
+            Gets the source <see cref="T:Quixo3D.Framework.Coordinate"/>
+            </summary>
+        </member>
+        <member name="T:Quixo3D.Framework.Players">
+            <summary>
+            This enumeration represent the three valid states that a piece can have.
+            </summary>
+        </member>
+        <member name="F:Quixo3D.Framework.Players.None">
+            <summary>
+            The piece with no claimed player.
+            </summary>
+        </member>
+        <member name="F:Quixo3D.Framework.Players.X">
+            <summary>
+            The piece claimed by the first player (X).
+            </summary>
+        </member>
+        <member name="F:Quixo3D.Framework.Players.O">
+            <summary>
+            The piece claimed by the second player (X).
+            </summary>
+        </member>
+        <member name="T:Quixo3D.Framework.CoordinateLocation">
+            <summary>
+            Specifies where a <see cref="T:Quixo3D.Framework.Coordinate"/> is on the <see cref="T:Quixo3D.Framework.Board"/>.
+            </summary>
+        </member>
+        <member name="F:Quixo3D.Framework.CoordinateLocation.Corner">
+            <summary>
+            Corner location.
+            </summary>
+        </member>
+        <member name="F:Quixo3D.Framework.CoordinateLocation.Edge">
+            <summary>
+            Edge location.
+            </summary>
+        </member>
+        <member name="F:Quixo3D.Framework.CoordinateLocation.Face">
+            <summary>
+            Face location.
+            </summary>
+        </member>
+        <member name="F:Quixo3D.Framework.CoordinateLocation.Middle">
+            <summary>
+            Middle location.
+            </summary>
+        </member>
+        <member name="T:Quixo3D.Framework.InvalidMoveException">
+            <summary>
+            The exception that is thrown if a user tries to make an invalid move.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.InvalidMoveException.#ctor">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.InvalidMoveException"/> instance.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.InvalidMoveException.#ctor(System.String)">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.InvalidMoveException"/> instance
+            with a specified error message.
+            </summary>
+            <param name="message">
+            The message that describes the error.
+            </param>
+        </member>
+        <member name="M:Quixo3D.Framework.InvalidMoveException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.InvalidMoveException"/> instance
+            with a specified error message and a reference to the inner exception that is the cause of this exception. 
+            </summary>
+            <param name="message">
+            The message that describes the error.
+            </param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, 
+            or a null reference if no inner exception is specified. 
+            </param>
+        </member>
+        <member name="T:Quixo3D.Framework.Constants">
+            <summary>
+            A placeholder for common values in the framework.
+            </summary>
+        </member>
+        <member name="F:Quixo3D.Framework.Constants.Dimension">
+            <summary>
+            Specifies the dimension of the cube.
+            </summary>
+        </member>
+        <member name="T:Quixo3D.Framework.ValidMove">
+            <summary>
+            Defines a valid move: the source <see cref="T:Quixo3D.Framework.Coordinate"/> value and
+            the destination <see cref="T:Quixo3D.Framework.Coordinate"/> values.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.ValidMove.#ctor(Quixo3D.Framework.Coordinate,System.Collections.Generic.List{Quixo3D.Framework.Coordinate})">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.ValidMove"/> instance.
+            </summary>
+            <param name="source">The source <see cref="T:Quixo3D.Framework.Coordinate"/> value.</param>
+            <param name="destinations">The destination <see cref="T:Quixo3D.Framework.Coordinate"/> values.</param>
+        </member>
+        <member name="M:Quixo3D.Framework.ValidMove.op_Equality(Quixo3D.Framework.ValidMove,Quixo3D.Framework.ValidMove)">
+            <summary>
+            Determines whether two specified <see cref="T:Quixo3D.Framework.ValidMove"/> objects have the same value. 
+            </summary>
+            <param name="a">A <see cref="T:Quixo3D.Framework.ValidMove"/> or a null reference.</param>
+            <param name="b">A <see cref="T:Quixo3D.Framework.ValidMove"/> or a null reference.</param>
+            <returns><b>true</b> if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise, <b>false</b>. </returns>
+        </member>
+        <member name="M:Quixo3D.Framework.ValidMove.op_Inequality(Quixo3D.Framework.ValidMove,Quixo3D.Framework.ValidMove)">
+            <summary>
+            Determines whether two specified <see cref="T:Quixo3D.Framework.ValidMove"/> objects have different value. 
+            </summary>
+            <param name="a">A <see cref="T:Quixo3D.Framework.ValidMove"/> or a null reference.</param>
+            <param name="b">A <see cref="T:Quixo3D.Framework.ValidMove"/> or a null reference.</param>
+            <returns><b>true</b> if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise, <b>false</b>. </returns>
+        </member>
+        <member name="M:Quixo3D.Framework.ValidMove.Equals(System.Object)">
+            <summary>
+            Determines whether this instance of <see cref="T:Quixo3D.Framework.ValidMove"/> and a specified object, 
+            which must also be a <see cref="T:Quixo3D.Framework.ValidMove"/> object, have the same value. 
+            </summary>
+            <param name="obj">An <see cref="T:System.Object"/>.</param>
+            <returns><b>true</b> if <paramref name="obj"/> is a <see cref="T:Quixo3D.Framework.ValidMove"/> and its value 
+            is the same as this instance; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:Quixo3D.Framework.ValidMove.Equals(Quixo3D.Framework.ValidMove)">
+            <summary>
+            Determines whether this instance of <see cref="T:Quixo3D.Framework.ValidMove"/> and a 
+            specified <see cref="T:Quixo3D.Framework.ValidMove"/> object have the same value. 
+            </summary>
+            <param name="other">A <see cref="T:Quixo3D.Framework.ValidMove"/>.</param>
+            <returns><b>true</b> if <paramref name="other"/> is a <see cref="T:Quixo3D.Framework.ValidMove"/> and its value 
+            is the same as this instance; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:Quixo3D.Framework.ValidMove.GetHashCode">
+            <summary>
+            Returns the hash code for this <see cref="T:Quixo3D.Framework.ValidMove"/>.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="P:Quixo3D.Framework.ValidMove.Destinations">
+            <summary>
+            Gets the valid destination <see cref="T:Quixo3D.Framework.Coordinate"/> values.
+            </summary>
+        </member>
+        <member name="P:Quixo3D.Framework.ValidMove.Source">
+            <summary>
+            Gets the source <see cref="T:Quixo3D.Framework.Coordinate"/>
+            </summary>
+        </member>
+        <member name="T:Quixo3D.Framework.WinningLines">
+            <summary>
+            Determines the number of winning lines in a given <see cref="T:Quixo3D.Framework.Board"/>.
+            </summary>
+        </member>
+        <member name="T:Quixo3D.Framework.BoardValidMoveCollection">
+            <summary>
+            An enumerator for valid moves.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.BoardValidMoveCollection.GetEnumerator">
+            <summary>
+            An enumerator for valid moves.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Quixo3D.Framework.ValidLineCollection">
+            <summary>
+            Finds all of the lines for a given coordinate.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.ValidLineCollection.#ctor(Quixo3D.Framework.Coordinate)">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.ValidLineCollection"/> instance.
+            </summary>
+            <param name="target">The coordinate to find the lines for.</param>
+        </member>
+        <member name="M:Quixo3D.Framework.ValidLineCollection.GetEnumerator">
+            <summary>
+            Gets an enumeration of <see cref="T:Quixo3D.Framework.Line"/> instances for the given target.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Quixo3D.Framework.ValidLineCollection.Target">
+            <summary>
+            Gets the target that lines are produced for.
+            </summary>
+        </member>
+        <member name="T:Quixo3D.Framework.Board">
+            <summary>
+            Represents a Quixo 3D board.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.Board.#ctor">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.Board"/> instance.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.Board.Clone">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.Board"/> that is a copy of the current instance. 
+            </summary>
+            <returns>A cloned <see cref="T:Quixo3D.Framework.Board"/>.</returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Board.GetPlayer(Quixo3D.Framework.Coordinate)">
+            <summary>
+            Returns the <see cref="T:Quixo3D.Framework.Players"/> at the specified co-ordinates.
+            </summary>
+            <param name="coordinate">The location of the desired <see cref="T:Quixo3D.Framework.Players"/>.</param>
+            <returns>
+            The <see cref="T:Quixo3D.Framework.Players"/> object at the requested position.
+            </returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Board.GetValidMoves">
+            <summary>
+            Gets all of the valid moves for the current player.
+            </summary>
+            <returns>A read-only collection of <see cref="T:Quixo3D.Framework.ValidMove"/>.</returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Board.GetValidMoveEnumerator">
+            <summary>
+            Gets an enumerator to iterate over the valid moves.
+            </summary>
+            <returns>An enumerator of valid moves.</returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Board.MovePiece(Quixo3D.Framework.Move)">
+            <summary>
+            Moves the piece from a source to a destination, specified by the given <see cref="T:Quixo3D.Framework.Move"/>.
+            </summary>
+            <param name="move">The desired move.</param>
+            <returns>A list of <see cref="T:Quixo3D.Framework.Coordinate"/>s that represent the positions affected by the move.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="move"/> is null.</exception>
+            <exception cref="T:Quixo3D.Framework.InvalidMoveException">Thrown if the given move is invalid.</exception>
+        </member>
+        <member name="M:Quixo3D.Framework.Board.MovePiece(Quixo3D.Framework.Coordinate,Quixo3D.Framework.Coordinate)">
+            <summary>
+            Moves the piece from <paramref name="source"/> to <paramref name="destination"/>.
+            </summary>
+            <param name="source">The source piece.</param>
+            <param name="destination">The destination piece.</param>
+            <returns>A list of <see cref="T:Quixo3D.Framework.Coordinate"/>s that represent the positions affected by the move.</returns>
+            <exception cref="T:Quixo3D.Framework.InvalidMoveException">Thrown if <paramref name="source"/> cannot be moved
+            by the current player, or if <paramref name="destination"/> is invalid</exception>
+        </member>
+        <member name="M:Quixo3D.Framework.Board.Undo">
+            <summary>
+            Reverts the last move.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.Board.Undo(System.UInt32)">
+            <summary>
+            Performs a number of <see cref="M:Quixo3D.Framework.Board.Undo"/> operations.
+            </summary>
+            <param name="count">The number of moves to undo.</param>
+            <remarks>
+            If <paramref name="count"/> is greater than the number of moves made in the game,
+            the board resets itself to the beginning.
+            </remarks>
+        </member>
+        <member name="P:Quixo3D.Framework.Board.Current">
+            <summary>
+            Gets the current player.
+            </summary>
+        </member>
+        <member name="P:Quixo3D.Framework.Board.MoveHistory">
+            <summary>
+            Gets a read-only collection of the current moves in the game.
+            </summary>
+        </member>
+        <member name="P:Quixo3D.Framework.Board.Winner">
+            <summary>
+            Gets the winning player (if one exists).
+            </summary>
+        </member>
+        <member name="P:Quixo3D.Framework.Board.WinningLines">
+            <summary>
+            Gets all of the winning lines for the current board.
+            </summary>
+            <remarks>
+            The count will be zero if <see cref="P:Quixo3D.Framework.Board.Winner"/> is equal to <see cref="F:Quixo3D.Framework.Players.None"/>;
+            otherwise, the count will be greater than zero.
+            </remarks>
+        </member>
+        <member name="T:Quixo3D.Framework.LineException">
+            <summary>
+            The exception that is thrown if a user tries to make an invalid <see cref="T:Quixo3D.Framework.Line"/>.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.LineException.#ctor">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.LineException"/> instance.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.LineException.#ctor(System.String)">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.LineException"/> instance
+            with a specified error message.
+            </summary>
+            <param name="message">
+            The message that describes the error.
+            </param>
+        </member>
+        <member name="M:Quixo3D.Framework.LineException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.LineException"/> instance
+            with a specified error message and a reference to the inner exception that is the cause of this exception. 
+            </summary>
+            <param name="message">
+            The message that describes the error.
+            </param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, 
+            or a null reference if no inner exception is specified. 
+            </param>
+        </member>
+        <member name="T:Quixo3D.Framework.Line">
+            <summary>
+            Defines a line (horizontal, vertical, or diagonal) on a <see cref="T:Quixo3D.Framework.Board"/>.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.Line.#ctor(Quixo3D.Framework.Coordinate,Quixo3D.Framework.Coordinate)">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.Line"/> instance.
+            </summary>
+            <param name="start">The start of the line.</param>
+            <param name="end">The end of the line.</param>
+        </member>
+        <member name="M:Quixo3D.Framework.Line.op_Equality(Quixo3D.Framework.Line,Quixo3D.Framework.Line)">
+            <summary>
+            Determines whether two specified <see cref="T:Quixo3D.Framework.Line"/> objects have the same value. 
+            </summary>
+            <param name="a">A <see cref="T:Quixo3D.Framework.Line"/> or a null reference.</param>
+            <param name="b">A <see cref="T:Quixo3D.Framework.Line"/> or a null reference.</param>
+            <returns><b>true</b> if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise, <b>false</b>. </returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Line.op_Inequality(Quixo3D.Framework.Line,Quixo3D.Framework.Line)">
+            <summary>
+            Determines whether two specified <see cref="T:Quixo3D.Framework.Line"/> objects have different value. 
+            </summary>
+            <param name="a">A <see cref="T:Quixo3D.Framework.Line"/> or a null reference.</param>
+            <param name="b">A <see cref="T:Quixo3D.Framework.Line"/> or a null reference.</param>
+            <returns><b>true</b> if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise, <b>false</b>. </returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Line.Contains(Quixo3D.Framework.Coordinate)">
+            <summary>
+            Determines if a position exists within the line.
+            </summary>
+            <param name="position">The <see cref="T:Quixo3D.Framework.Coordinate"/> to check.</param>
+            <returns>Returns <c>true</c> if the position is in the line; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Line.Equals(Quixo3D.Framework.Line)">
+            <summary>
+            Determines whether this instance of <see cref="T:Quixo3D.Framework.Line"/> and a 
+            specified <see cref="T:Quixo3D.Framework.Line"/> object have the same value. 
+            </summary>
+            <param name="other">A <see cref="T:Quixo3D.Framework.Line"/>.</param>
+            <returns><b>true</b> if <paramref name="other"/> is a <see cref="T:Quixo3D.Framework.Line"/> and its value 
+            is the same as this instance; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Line.Equals(System.Object)">
+            <summary>
+            Determines whether this instance of <see cref="T:Quixo3D.Framework.Line"/> and a specified object, 
+            which must also be a <see cref="T:Quixo3D.Framework.Line"/> object, have the same value. 
+            </summary>
+            <param name="obj">An <see cref="T:System.Object"/>.</param>
+            <returns><b>true</b> if <paramref name="obj"/> is a <see cref="T:Quixo3D.Framework.Line"/> and its value 
+            is the same as this instance; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Line.GetEnumerator">
+            <summary>
+            An enumerator for all of the positions within the line.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Line.GetHashCode">
+            <summary>
+            Returns the hash code for this <see cref="T:Quixo3D.Framework.Line"/>.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>		
+        </member>
+        <member name="M:Quixo3D.Framework.Line.ToString">
+            <summary>
+            Gets a user-friendly version of a <see cref="T:Quixo3D.Framework.Line"/> object.
+            </summary>
+            <returns>A string that has the start and end values.</returns>
+        </member>
+        <member name="P:Quixo3D.Framework.Line.End">
+            <summary>
+            Gets the end of the line.
+            </summary>
+        </member>
+        <member name="P:Quixo3D.Framework.Line.Start">
+            <summary>
+            Gets the start of the line.
+            </summary>
+        </member>
+        <member name="T:Quixo3D.Framework.Coordinate">
+            <summary>
+            Defines the X, Y, and Z positions of a piece in the cube.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.Coordinate.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.Coordinate"/> instance.
+            </summary>
+            <param name="x">The x value.</param>
+            <param name="y">The y value.</param>
+            <param name="z">The z value.</param>
+            <exception cref="T:System.ArgumentException">
+            Thrown if any of the arguments are greater that or equal to <see cref="F:Quixo3D.Framework.Constants.Dimension"/>.
+            </exception>
+        </member>
+        <member name="M:Quixo3D.Framework.Coordinate.op_Equality(Quixo3D.Framework.Coordinate,Quixo3D.Framework.Coordinate)">
+            <summary>
+            Determines whether two specified <see cref="T:Quixo3D.Framework.Coordinate"/> objects have the same value. 
+            </summary>
+            <param name="a">A <see cref="T:Quixo3D.Framework.Coordinate"/> or a null reference.</param>
+            <param name="b">A <see cref="T:Quixo3D.Framework.Coordinate"/> or a null reference.</param>
+            <returns><b>true</b> if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise, <b>false</b>. </returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Coordinate.op_Inequality(Quixo3D.Framework.Coordinate,Quixo3D.Framework.Coordinate)">
+            <summary>
+            Determines whether two specified <see cref="T:Quixo3D.Framework.Coordinate"/> objects have different value. 
+            </summary>
+            <param name="a">A <see cref="T:Quixo3D.Framework.Coordinate"/> or a null reference.</param>
+            <param name="b">A <see cref="T:Quixo3D.Framework.Coordinate"/> or a null reference.</param>
+            <returns><b>true</b> if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise, <b>false</b>. </returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Coordinate.Equals(System.Object)">
+            <summary>
+            Checks to see if the given object is equal to the current <see cref="T:Quixo3D.Framework.Coordinate"/> instance.
+            </summary>
+            <param name="obj">The object to check for equality.</param>
+            <returns>Returns <c>true</c> if the objects are equals; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Coordinate.Equals(Quixo3D.Framework.Coordinate)">
+            <summary>
+            Provides a type-safe equality check.
+            </summary>
+            <param name="other">The object to check for equality.</param>
+            <returns>Returns <c>true</c> if the objects are equals; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Coordinate.GetHashCode">
+            <summary>
+            Gets a hash code based on the 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Quixo3D.Framework.Coordinate.ToString">
+            <summary>
+            Returns a meaningful string representation of the current <see cref="T:Quixo3D.Framework.Coordinate"/> instance.
+            </summary>
+            <returns>A string representation of the object.</returns>
+        </member>
+        <member name="P:Quixo3D.Framework.Coordinate.Location">
+            <summary>
+            Gets the location.
+            </summary>
+        </member>
+        <member name="P:Quixo3D.Framework.Coordinate.X">
+            <summary>
+            Gets the x value.
+            </summary>
+        </member>
+        <member name="P:Quixo3D.Framework.Coordinate.Y">
+            <summary>
+            Gets the y value.
+            </summary>
+        </member>
+        <member name="P:Quixo3D.Framework.Coordinate.Z">
+            <summary>
+            Gets the z value.
+            </summary>
+        </member>
+        <member name="T:Quixo3D.Framework.BoardFormatter">
+            <summary>
+            Performs custom serialization for a <see cref="T:Quixo3D.Framework.Board"/>.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.BoardFormatter.#ctor">
+            <summary>
+            Creates a new <see cref="T:Quixo3D.Framework.BoardFormatter"/> instance.
+            </summary>
+        </member>
+        <member name="M:Quixo3D.Framework.BoardFormatter.Deserialize(System.IO.Stream)">
+            <summary>
+            Returns a <see cref="T:Quixo3D.Framework.Board"/> object based on the 
+            serialized data.
+            </summary>
+            <param name="serializationStream">A serialized version of a <see cref="T:Quixo3D.Framework.Board"/>.</param>
+            <returns>A new <see cref="T:Quixo3D.Framework.Board"/> object.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="serializationStream"/> is <code>null</code>.</exception>
+            <exception cref="T:Quixo3D.Framework.InvalidMoveException">Thrown if a move error occurred during deserialization.</exception>
+            <exception cref="T:System.Xml.XmlException">Thrown if an XML error occurred during deserialization.</exception>
+        </member>
+        <member name="M:Quixo3D.Framework.BoardFormatter.Serialize(System.IO.Stream,System.Object)">
+            <summary>
+            Serializes the given <see cref="T:Quixo3D.Framework.Board"/> into the stream.
+            </summary>
+            <param name="serializationStream">The stream to serialize the given <see cref="T:Quixo3D.Framework.Board"/>.</param>
+            <param name="graph">A <see cref="T:Quixo3D.Framework.Board"/> object to serialize.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if either <paramref name="serializationStream"/> or <paramref name="graph"/> are <code>null</code>.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="graph"/> is not a <see cref="T:Quixo3D.Framework.Board"/>.</exception>
+        </member>
+        <member name="P:Quixo3D.Framework.BoardFormatter.Binder">
+            <summary>
+            Gets or sets the binder.
+            </summary>
+        </member>
+        <member name="P:Quixo3D.Framework.BoardFormatter.Context">
+            <summary>
+            Gets or sets the context.
+            </summary>
+        </member>
+        <member name="P:Quixo3D.Framework.BoardFormatter.SurrogateSelector">
+            <summary>
+            Gets or sets the surrogate selector.
+            </summary>
+        </member>
+    </members>
+</doc>

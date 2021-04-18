@@ -1,0 +1,14 @@
+<UserControl x:Class="Quixo3D.UI.PluginList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<StackPanel VerticalAlignment="Stretch">
+		<TextBlock x:Name="titleTextBlock" Text="Title" Margin="5"  VerticalAlignment="Stretch"/>
+		<StackPanel Orientation="Horizontal">
+			<CheckBox x:Name="humanCheckBox" IsChecked="True" />
+			<TextBlock Text="Human"/>
+		</StackPanel>
+		<ListBox x:Name="pluginListBox" IsEnabled="False" VerticalAlignment="Stretch" Margin="5"></ListBox>
+	</StackPanel>
+
+</UserControl>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRunConfiguration name="Local Test Run" id="b3712269-6662-4d17-adcc-ff1fbd0fdadd" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <Description>This is a default test run configuration for a local test run.</Description>
+  <CodeCoverage enabled="true">
+    <Regular>
+      <CodeCoverageItem binaryFile="Quixo3D.Framework\bin\Debug\Quixo3D.Framework.dll" pdbFile="Quixo3D.Framework\bin\Debug\Quixo3D.Framework.pdb" instrumentInPlace="true" />
+      <CodeCoverageItem binaryFile="Quixo3D.Engine\bin\Debug\Quixo3D.Engine.dll" pdbFile="Quixo3D.Engine\bin\Debug\Quixo3D.Engine.pdb" instrumentInPlace="true" />
+    </Regular>
+  </CodeCoverage>
+  <TestTypeSpecific />
+</TestRunConfiguration>

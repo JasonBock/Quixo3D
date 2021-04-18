@@ -1,0 +1,14 @@
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine.Tests\bin\Release\Quixo3D.Engine.Tests.dll
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine.Tests\bin\Release\Quixo3D.Engine.Tests.pdb
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine.Tests\bin\Release\Quixo3D.Engine.Tests.dll.CodeAnalysisLog.xml
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine.Tests\bin\Release\Quixo3D.Engine.Tests.dll.lastcodeanalysissucceeded
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine.Tests\bin\Release\Quixo3D.Engine.dll
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine.Tests\bin\Release\Quixo3D.Framework.dll
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine.Tests\bin\Release\Quixo3D.Framework.Tests.dll
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine.Tests\bin\Release\Spackle.dll
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine.Tests\bin\Release\Quixo3D.Engine.pdb
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine.Tests\bin\Release\Quixo3D.Framework.pdb
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine.Tests\bin\Release\Quixo3D.Framework.Tests.pdb
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine.Tests\obj\Release\ResolveAssemblyReference.cache
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine.Tests\obj\Release\Quixo3D.Engine.Tests.dll
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine.Tests\obj\Release\Quixo3D.Engine.Tests.pdb

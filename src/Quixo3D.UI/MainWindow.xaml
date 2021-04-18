@@ -1,0 +1,164 @@
+﻿<Window x:Class="Quixo3D.UI.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Quixo3D.UI" Height="400" Width="600"
+	xmlns:tools="clr-namespace:_3DTools;assembly=3DTools" 
+	xmlns:quixo="clr-namespace:Quixo3D.UI" WindowState="Maximized"
+    >
+	<Window.Background>
+		<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+			<GradientStop Color="#999999" Offset="0"/>
+			<GradientStop Color="#000000" Offset="1"/>
+		</LinearGradientBrush>
+
+	</Window.Background>
+
+	<Window.Resources>
+
+		<Style x:Key="panelHeading" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="15"/>
+			<Setter Property="Margin" Value="5"/>
+			<Setter Property="FontWeight" Value="Bold"/>
+		</Style>
+		<Style x:Key="menuStyle"  TargetType="Menu">
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="BorderBrush">
+				<Setter.Value>
+					<SolidColorBrush Color="#cccccc" />
+				</Setter.Value>
+			</Setter>
+			<Setter Property="Background">
+				<Setter.Value>
+					<SolidColorBrush Color="Black" />
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="menuItemStyle" TargetType="MenuItem">
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="Background">
+				<Setter.Value>
+					<SolidColorBrush Color="Black" />
+				</Setter.Value>
+			</Setter>
+		</Style>
+
+	</Window.Resources>
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.040447504302926*"></RowDefinition>
+			<RowDefinition Height="0.959552495697074*"></RowDefinition>
+		</Grid.RowDefinitions>
+
+		<Grid Grid.Row="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="0.7025*" />
+				<ColumnDefinition Width="0.0050*" />
+				<ColumnDefinition Width="0.2925*" />
+			</Grid.ColumnDefinitions>
+
+			<Border CornerRadius="1" BorderBrush="#58290A"
+						  BorderThickness="0" Grid.Column="0">
+
+				<Grid>
+
+					<quixo:Quixo3DTrackballDecorator x:Name="trackball">
+
+						<Viewport3D x:Name="mainViewport" ClipToBounds="False">
+							<Viewport3D.Camera>
+								<PerspectiveCamera Position="26,27,35" LookDirection="-26,-27,-35" UpDirection="0,1,0"/>
+							</Viewport3D.Camera>
+							<ModelVisual3D x:Name="lightVisual">
+								<ModelVisual3D.Content>
+									<Model3DGroup>
+										<DirectionalLight Color="#ffffff" Direction="2 -3 -1"/>
+										<DirectionalLight Color="#ffffff" Direction="-2 3 1"/>
+										<AmbientLight Color="#333333"/>
+									</Model3DGroup>
+								</ModelVisual3D.Content>
+							</ModelVisual3D>
+							<ModelVisual3D x:Name="boardVisual"/>
+
+
+						</Viewport3D>
+					</quixo:Quixo3DTrackballDecorator>
+				</Grid>
+			</Border>
+
+			<Grid Grid.Column="2">
+
+				<Grid.RowDefinitions>
+					<RowDefinition Height="60"/>
+					<RowDefinition Height="60"/>
+					<RowDefinition Height="200"/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+
+
+				<Border CornerRadius="20" BorderBrush="#58290A"
+					 BorderThickness="1" Grid.Row="0" Margin="10" Opacity=".5">
+					<Border.Background>
+						<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+							<GradientStop Color="#cccccc" Offset="0"/>
+							<GradientStop Color="#ffffff" Offset="1"/>
+						</LinearGradientBrush>
+					</Border.Background>
+					<TextBlock x:Name="turnTextBlock" VerticalAlignment="Center" Margin="10" FontSize="20" FontFamily="Consolas" Foreground="Black"></TextBlock>
+				</Border>
+
+				<Border CornerRadius="20" BorderBrush="#58290A"
+					 BorderThickness="1" Grid.Row="1" Margin="10" Opacity=".5" Padding="10">
+					<Border.Background>
+						<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+							<GradientStop Color="#cccccc" Offset="0"/>
+							<GradientStop Color="#ffffff" Offset="1"/>
+						</LinearGradientBrush>
+					</Border.Background>
+					<TextBlock x:Name="infoTextBlock" FontFamily="Consolas" VerticalAlignment="Center"></TextBlock>
+				</Border>
+
+				<Border CornerRadius="20" BorderBrush="#58290A"
+					 BorderThickness="1" Grid.Row="2" Margin="10" Opacity=".5" Padding="10">
+					<Border.Background>
+						<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+							<GradientStop Color="#cccccc" Offset="0"/>
+							<GradientStop Color="#ffffff" Offset="1"/>
+						</LinearGradientBrush>
+					</Border.Background>
+					<StackPanel>
+						<TextBlock Style="{StaticResource panelHeading}">Commands</TextBlock>
+						<quixo:CommandReference />
+					</StackPanel>
+				</Border>
+
+				<Border CornerRadius="20" BorderBrush="#58290A"
+					 BorderThickness="1" Grid.Row="3" Margin="10" Opacity=".5">
+					<Border.Background>
+						<LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+							<GradientStop Color="#cccccc" Offset="0"/>
+							<GradientStop Color="#ffffff" Offset="1"/>
+						</LinearGradientBrush>
+					</Border.Background>
+					<StackPanel>
+						<TextBlock Style="{StaticResource panelHeading}" Margin="10">Move History</TextBlock>
+						<quixo:MoveHistory x:Name="moveHistory" VerticalAlignment="Stretch"/>
+					</StackPanel>
+				</Border>
+
+			</Grid>
+
+		</Grid>
+
+		<Menu Height="Auto" VerticalAlignment="Top" HorizontalAlignment="Stretch" Grid.Row="0" Width="Auto" Opacity=".7" Style="{StaticResource menuStyle}">
+
+			<MenuItem Header="Game" Style="{StaticResource menuItemStyle}">
+				<MenuItem Header="_New" Click="NewMenuItem_Click" Style="{StaticResource menuItemStyle}"/>
+				<MenuItem Header="_Open..." Click="OpenMenuItem_Click" Style="{StaticResource menuItemStyle}"/>
+				<MenuItem Header="_Save" Click="SaveMenuItem_Click" Style="{StaticResource menuItemStyle}"/>
+				<MenuItem Header="_Exit" Click="ExitMenuItem_Click" Style="{StaticResource menuItemStyle}"/>
+			</MenuItem>
+		</Menu>
+
+	</Grid>
+</Window>

@@ -1,0 +1,10 @@
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine\bin\Release\Quixo3D.Engine.dll
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine\bin\Release\Quixo3D.Engine.pdb
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine\bin\Release\Quixo3D.Engine.dll.CodeAnalysisLog.xml
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine\bin\Release\Quixo3D.Engine.dll.lastcodeanalysissucceeded
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine\bin\Release\Quixo3D.Framework.dll
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine\bin\Release\Spackle.dll
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine\bin\Release\Quixo3D.Framework.pdb
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine\obj\Release\ResolveAssemblyReference.cache
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine\obj\Release\Quixo3D.Engine.dll
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Engine\obj\Release\Quixo3D.Engine.pdb

@@ -1,0 +1,7 @@
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Framework\bin\Debug\Quixo3D.Framework.dll
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Framework\bin\Debug\Quixo3D.Framework.pdb
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Framework\bin\Debug\Quixo3D.Framework.dll.CodeAnalysisLog.xml
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Framework\bin\Debug\Quixo3D.Framework.dll.lastcodeanalysissucceeded
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Framework\obj\Debug\ResolveAssemblyReference.cache
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Framework\obj\Debug\Quixo3D.Framework.dll
+C:\JasonBock\Personal\.NET Projects\Quixo3D\Quixo3D.Framework\obj\Debug\Quixo3D.Framework.pdb

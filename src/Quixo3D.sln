@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D39B0FD2-82CC-41B5-9AFC-51A67A9B4733}"
+	ProjectSection(SolutionItems) = preProject
+		localtestrun.testrunconfig = localtestrun.testrunconfig
+		Quixo3D.vsmdi = Quixo3D.vsmdi
+		Spackle.dll = Spackle.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quixo3D.Framework", "Quixo3D.Framework\Quixo3D.Framework.csproj", "{3562C503-3A2E-417E-B542-EDC86097304B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quixo3D.Engine", "Quixo3D.Engine\Quixo3D.Engine.csproj", "{4D780BED-CAEB-4656-B7BC-136E27EB605E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quixo3D.Framework.Tests", "Quixo3D.Framework.Tests\Quixo3D.Framework.Tests.csproj", "{53276A10-DD59-4D83-B1A8-76B821F49EF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quixo3D.Engine.Tests", "Quixo3D.Engine.Tests\Quixo3D.Engine.Tests.csproj", "{CF2FF2D9-E09F-412E-A1D9-A2E962B3630A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quixo3D.UI", "Quixo3D.UI\Quixo3D.UI.csproj", "{91F18068-7A79-44F2-B527-620FD04A38F7}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs06.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Quixo3D.Engine.Tests\\Quixo3D.Engine.Tests.csproj
+		SccProjectName1 = Quixo3D.Engine.Tests
+		SccLocalPath1 = Quixo3D.Engine.Tests
+		SccProjectUniqueName2 = Quixo3D.Engine\\Quixo3D.Engine.csproj
+		SccProjectName2 = Quixo3D.Engine
+		SccLocalPath2 = Quixo3D.Engine
+		SccProjectUniqueName3 = Quixo3D.Framework.Tests\\Quixo3D.Framework.Tests.csproj
+		SccProjectName3 = Quixo3D.Framework.Tests
+		SccLocalPath3 = Quixo3D.Framework.Tests
+		SccProjectUniqueName4 = Quixo3D.Framework\\Quixo3D.Framework.csproj
+		SccProjectName4 = Quixo3D.Framework
+		SccLocalPath4 = Quixo3D.Framework
+		SccProjectUniqueName5 = Quixo3D.UI\\Quixo3D.UI.csproj
+		SccProjectName5 = Quixo3D.UI
+		SccLocalPath5 = Quixo3D.UI
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Quixo3D.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3562C503-3A2E-417E-B542-EDC86097304B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3562C503-3A2E-417E-B542-EDC86097304B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3562C503-3A2E-417E-B542-EDC86097304B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3562C503-3A2E-417E-B542-EDC86097304B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D780BED-CAEB-4656-B7BC-136E27EB605E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D780BED-CAEB-4656-B7BC-136E27EB605E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D780BED-CAEB-4656-B7BC-136E27EB605E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D780BED-CAEB-4656-B7BC-136E27EB605E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53276A10-DD59-4D83-B1A8-76B821F49EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53276A10-DD59-4D83-B1A8-76B821F49EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53276A10-DD59-4D83-B1A8-76B821F49EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53276A10-DD59-4D83-B1A8-76B821F49EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF2FF2D9-E09F-412E-A1D9-A2E962B3630A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF2FF2D9-E09F-412E-A1D9-A2E962B3630A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF2FF2D9-E09F-412E-A1D9-A2E962B3630A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF2FF2D9-E09F-412E-A1D9-A2E962B3630A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F18068-7A79-44F2-B527-620FD04A38F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F18068-7A79-44F2-B527-620FD04A38F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F18068-7A79-44F2-B527-620FD04A38F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F18068-7A79-44F2-B527-620FD04A38F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
